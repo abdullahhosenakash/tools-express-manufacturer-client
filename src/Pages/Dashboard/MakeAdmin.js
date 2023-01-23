@@ -51,7 +51,7 @@ const MakeAdmin = () => {
         body: JSON.stringify({ role: 'Admin' })
       })
         .then((res) => res.json())
-        .then((data) => {
+        .then(() => {
           const restUsers = updatedUsers.filter(
             (updatedUser) => updatedUser._id !== _id
           );
@@ -79,9 +79,9 @@ const MakeAdmin = () => {
         <thead>
           <tr>
             <th></th>
-            <th>Tool Name</th>
-            <th>Quantity</th>
-            <th>Total Price</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Role</th>
             <th>Action</th>
           </tr>
         </thead>
