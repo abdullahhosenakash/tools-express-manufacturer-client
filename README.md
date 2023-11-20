@@ -24,3 +24,13 @@ Live link of the project is [here](https://tools-express-manufacturer1.web.app/)
 - the server is created with ExpressJS and deployed to heroku
 - Dynamic page title
 - JWT Token
+
+## Admin Credentials
+
+- Email: abdullahhosenakash@gmail.com
+- Password: 123456
+
+## User Credentials
+
+- Email: abdullahhossen72@gmail.com
+- Password: 123456

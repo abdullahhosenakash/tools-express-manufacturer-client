@@ -9,46 +9,85 @@ import PageTitle from '../Shared/PageTitle';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    const [user] = useAuthState(auth);
-    const [users, loading] = useUsers();
-    const [loggedInUser, setLoggedInUser] = useState({});
+  const [user] = useAuthState(auth);
+  const [users, loading] = useUsers();
+  const [loggedInUser, setLoggedInUser] = useState({});
 
-    useEffect(() => {
-        setLoggedInUser(users.find(u => u.userEmail === user.email));
-    }, [users, user.email]);
+  useEffect(() => {
+    setLoggedInUser(users.find((u) => u.userEmail === user.email));
+  }, [users, user.email]);
 
-    if (loading) {
-        return <Loading />;
-    }
+  if (loading) {
+    return <Loading />;
+  }
+  console.log(loggedInUser);
 
-    return (
-        <div>
-            <PageTitle title="Dashboard" />
-            <div className="d-flex">
-                <div className="text-white position-fixed side-navbar ps-3 pt-3">
-                    <h2>Dashboard</h2>
-                    {loggedInUser?.role === 'Admin' ?
-                        <>
-                            <Nav.Link className='text-white' as={Link} to='/dashboard/manageOrders'>Manage All Orders</Nav.Link>
-                            <Nav.Link className='text-white' as={Link} to='/dashboard/addProduct'>Add A Product</Nav.Link>
-                            <Nav.Link className='text-white' as={Link} to='/dashboard/makeAdmin'>Make Admin</Nav.Link>
-                            <Nav.Link className='text-white' as={Link} to='/dashboard/manageProducts'>Manage Products</Nav.Link>
-                        </>
-                        :
-                        <>
-                            <Nav.Link className='text-white' as={Link} to='/dashboard/myOrders'>My Orders</Nav.Link>
-                            <Nav.Link className='text-white' as={Link} to='/dashboard/addReview'>Add a Review</Nav.Link>
-                        </>
-                    }
-                    <Nav.Link className='text-white' as={Link} to='/dashboard/myProfile'>My Profile</Nav.Link>
-                </div>
-                <div className="dashboard-window">
-                    <h2 className="display-6 text-center">Welcome to Dashboard</h2>
-                    <Outlet />
-                </div>
-            </div>
+  return (
+    <div>
+      <PageTitle title='Dashboard' />
+      <div className='d-flex'>
+        <div className='text-white position-fixed side-navbar ps-3 pt-3'>
+          <h2>Dashboard</h2>
+          {loggedInUser?.role === 'Admin' ? (
+            <>
+              <Nav.Link
+                className='text-white'
+                as={Link}
+                to='/dashboard/manageOrders'
+              >
+                Manage All Orders
+              </Nav.Link>
+              <Nav.Link
+                className='text-white'
+                as={Link}
+                to='/dashboard/addProduct'
+              >
+                Add A Product
+              </Nav.Link>
+              <Nav.Link
+                className='text-white'
+                as={Link}
+                to='/dashboard/makeAdmin'
+              >
+                Make Admin
+              </Nav.Link>
+              <Nav.Link
+                className='text-white'
+                as={Link}
+                to='/dashboard/manageProducts'
+              >
+                Manage Products
+              </Nav.Link>
+            </>
+          ) : (
+            <>
+              <Nav.Link
+                className='text-white'
+                as={Link}
+                to='/dashboard/myOrders'
+              >
+                My Orders
+              </Nav.Link>
+              <Nav.Link
+                className='text-white'
+                as={Link}
+                to='/dashboard/addReview'
+              >
+                Add a Review
+              </Nav.Link>
+            </>
+          )}
+          <Nav.Link className='text-white' as={Link} to='/dashboard/myProfile'>
+            My Profile
+          </Nav.Link>
         </div>
-    );
+        <div className='dashboard-window'>
+          <h2 className='display-6 text-center'>Welcome to Dashboard</h2>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;

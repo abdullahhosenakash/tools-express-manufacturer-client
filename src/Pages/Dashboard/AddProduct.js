@@ -64,7 +64,7 @@ const AddProduct = () => {
       unitPrice
     };
 
-    fetch('http://localhost:5000/tools', {
+    fetch('https://tools-express-manufacturer-server.onrender.com/tools', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

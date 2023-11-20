@@ -32,7 +32,7 @@ const SignUp = () => {
   const [signUpLoading, setSignUpLoading] = useState(false);
   const [user, userLoading] = useAuthState(auth);
   const [token] = useToken(user);
-  const imageStorageKey = '6bb82bf574ef700af209c385111f9392';
+  const imageStorageKey = process.env.IMG_API_KEY;
   const from = location?.state?.from?.pathname || '/';
 
   useEffect(() => {
@@ -98,7 +98,7 @@ const SignUp = () => {
         <Form.Control
           type='text'
           placeholder='Enter Your Name'
-          {...register('userName', { required: true, maxLength: 20 })}
+          {...register('userName', { required: true, maxLength: 30 })}
           className='mb-2'
         />
 
@@ -110,7 +110,7 @@ const SignUp = () => {
         <Form.Control
           type='email'
           placeholder='Enter Email'
-          {...register('userEmail', { required: true, maxLength: 20 })}
+          {...register('userEmail', { required: true, maxLength: 30 })}
           className='mb-2'
         />
         <small className='text-danger'>
@@ -121,7 +121,7 @@ const SignUp = () => {
         <Form.Control
           type='password'
           placeholder='Enter Password'
-          {...register('userPassword', { required: true, maxLength: 20 })}
+          {...register('userPassword', { required: true, maxLength: 30 })}
           className='mb-2'
         />
         <small className='text-danger'>
