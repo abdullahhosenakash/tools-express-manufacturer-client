@@ -1,7 +1,8 @@
 # Tools Express Manufacturer
 
-This is a project of a tools express which is actually a manufacturing industry. <br/>
-Live link of the project is [here](https://tools-express-manufacturer1.web.app/).
+This a web application about a manufacturer company that manufactures industrial level hardware tools, supplies them to the respective wholesale business mans worldwide. <br/>
+
+- Live link: [Tools Express Manufacturer](https://tools-express-manufacturer1.web.app/).
 
 ## What the project has:
 
