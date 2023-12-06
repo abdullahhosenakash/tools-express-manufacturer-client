@@ -40,7 +40,7 @@ const ManageProducts = () => {
     if (proceed) {
       setAdminLoading(true);
       fetch(
-        `https://tools-express-manufacturer-server.onrender.com/tools/${_id}`,
+        `https://tools-express-manufacturer-server.vercel.app/tools/${_id}`,
         {
           method: 'DELETE'
         }

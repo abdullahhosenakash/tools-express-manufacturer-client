@@ -10,7 +10,7 @@ const useToken = () => {
     const currentUser = { email };
     email &&
       fetch(
-        `https://tools-express-manufacturer-server.onrender.com/user/${email}`,
+        `https://tools-express-manufacturer-server.vercel.app/user/${email}`,
         {
           method: 'PUT',
           headers: {

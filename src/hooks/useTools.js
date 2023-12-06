@@ -6,7 +6,7 @@ const useTools = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://tools-express-manufacturer-server.onrender.com/tools')
+    fetch('https://tools-express-manufacturer-server.vercel.app/tools')
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);

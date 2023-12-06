@@ -13,7 +13,7 @@ const useUsers = () => {
   useEffect(() => {
     if (token) {
       setLoading(true);
-      fetch('https://tools-express-manufacturer-server.onrender.com/users', {
+      fetch('https://tools-express-manufacturer-server.vercel.app/users', {
         method: 'GET',
         headers: {
           authorization: `Bearer ${localStorage.getItem('accessToken')}`

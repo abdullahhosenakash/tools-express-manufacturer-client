@@ -48,7 +48,7 @@ const PlaceOrder = () => {
         totalPrice: JSON.stringify(quantity * unitPrice)
       };
 
-      fetch('https://tools-express-manufacturer-server.onrender.com/orders', {
+      fetch('https://tools-express-manufacturer-server.vercel.app/orders', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

@@ -31,7 +31,7 @@ const MyProfile = () => {
     const education = event.target.education.value;
     const userProfileInfo = { location, linkedIn, education, phone };
 
-    const url = `https://tools-express-manufacturer-server.onrender.com/users/${loggedInUser._id}`;
+    const url = `https://tools-express-manufacturer-server.vercel.app/users/${loggedInUser._id}`;
     fetch(url, {
       method: 'PUT',
       headers: {

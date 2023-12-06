@@ -38,7 +38,7 @@ const ManageOrders = () => {
   const handleApproveOrder = (_id) => {
     setAdminLoading(true);
     fetch(
-      `https://tools-express-manufacturer-server.onrender.com/orders/${_id}`,
+      `https://tools-express-manufacturer-server.vercel.app/orders/${_id}`,
       {
         method: 'PUT',
         headers: {
@@ -69,7 +69,7 @@ const ManageOrders = () => {
     if (proceed) {
       setAdminLoading(true);
       fetch(
-        `https://tools-express-manufacturer-server.onrender.com/orders/${_id}`,
+        `https://tools-express-manufacturer-server.vercel.app/orders/${_id}`,
         {
           method: 'DELETE'
         }

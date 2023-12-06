@@ -14,7 +14,7 @@ const CheckoutForm = ({ selectedOrder }) => {
   useEffect(() => {
     totalPrice &&
       fetch(
-        'https://tools-express-manufacturer-server.onrender.com/create-payment-intents',
+        'https://tools-express-manufacturer-server.vercel.app/create-payment-intents',
         {
           method: 'POST',
           headers: {
@@ -64,7 +64,7 @@ const CheckoutForm = ({ selectedOrder }) => {
     } else {
       setCardError('');
       fetch(
-        `https://tools-express-manufacturer-server.onrender.com/orders/${_id}`,
+        `https://tools-express-manufacturer-server.vercel.app/orders/${_id}`,
         {
           method: 'PUT',
           headers: {

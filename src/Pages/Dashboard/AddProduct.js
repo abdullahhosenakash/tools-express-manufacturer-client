@@ -64,7 +64,7 @@ const AddProduct = () => {
       unitPrice
     };
 
-    fetch('https://tools-express-manufacturer-server.onrender.com/tools', {
+    fetch('https://tools-express-manufacturer-server.vercel.app/tools', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

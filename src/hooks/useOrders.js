@@ -8,7 +8,7 @@ const useOrders = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://tools-express-manufacturer-server.onrender.com/orders', {
+    fetch('https://tools-express-manufacturer-server.vercel.app/orders', {
       method: 'GET',
       headers: {
         authorization: `Bearer ${localStorage.getItem('accessToken')}`

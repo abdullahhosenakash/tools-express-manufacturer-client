@@ -27,7 +27,7 @@ const MyOrders = () => {
     const proceed = window.confirm('Are you sure to cancel the order?');
     if (proceed) {
       fetch(
-        `https://tools-express-manufacturer-server.onrender.com/orders/${_id}`,
+        `https://tools-express-manufacturer-server.vercel.app/orders/${_id}`,
         {
           method: 'DELETE'
         }

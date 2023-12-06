@@ -43,7 +43,7 @@ const SocialSignIn = ({ from }) => {
       const registeredUser = users?.find((u) => u.userEmail === userEmail);
       if (!registeredUser) {
         const newUser = { userName, userEmail, userPhoto };
-        fetch('https://tools-express-manufacturer-server.onrender.com/users', {
+        fetch('https://tools-express-manufacturer-server.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

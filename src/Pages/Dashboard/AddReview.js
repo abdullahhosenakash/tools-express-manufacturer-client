@@ -22,7 +22,7 @@ const AddReview = () => {
     const userName = user.displayName;
     const userPhoto = user.photoURL;
     const userReview = { review, ratings, userName, img: userPhoto };
-    fetch('https://tools-express-manufacturer-server.onrender.com/reviews', {
+    fetch('https://tools-express-manufacturer-server.vercel.app/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

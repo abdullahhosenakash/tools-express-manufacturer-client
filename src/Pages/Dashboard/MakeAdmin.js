@@ -42,7 +42,7 @@ const MakeAdmin = () => {
 
     if (proceed) {
       setAdminLoading(true);
-      const url = `https://tools-express-manufacturer-server.onrender.com/users/${_id}`;
+      const url = `https://tools-express-manufacturer-server.vercel.app/users/${_id}`;
       fetch(url, {
         method: 'PUT',
         headers: {
